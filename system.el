@@ -21,14 +21,6 @@
 ;; (setq exec-path (cons "/usr/local/Cellar/erlang/R15B01/bin" exec-path))
 ;; (require 'erlang-start)
 
-;; Textline behavior for CMD + Enter
-;;(defun textmate-next-line ()
-;;  "Inserts an indented newline after the current line and moves the point to it."
-;;  (interactive)
-;;  (end-of-line)
-;;  (newline-and-indent))
-;;(global-set-key (kbd "<s-return>") 'textmate-next-line)
-
 ;; Needed for my environment. What follows now should be customized to
 ;; your PATHS
 (if (not (getenv "TERM_PROGRAM"))

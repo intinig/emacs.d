@@ -14,7 +14,7 @@
 
 (setq my-packages
       (append
-       '(el-get smex ido-ubiquitous paredit yasnippet)
+       '(el-get smex ido-ubiquitous paredit yasnippet inf-ruby rvm ruby-compilation)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
@@ -23,8 +23,9 @@
 ;; post el-get configuration
 ;;
 
-;; function definitiokns
+;; function definitions
 (load (concat user-emacs-directory "functions.el"))
+
 ;; load other emacs defaults
 (load (concat user-emacs-directory "defaults.el"))
 
