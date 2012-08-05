@@ -33,3 +33,6 @@
 
 ;; textmate behavior for enter key
 (global-set-key (kbd "<s-return>") 'textmate-next-line)
+
+;; magit-status
+(global-set-key (kbd "C-x g") 'magit-status)
