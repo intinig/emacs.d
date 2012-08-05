@@ -36,3 +36,17 @@
 
 ;; magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
+
+(when window-system
+  (setq frame-title-format '(buffer-file-name "%f" ("%b")))
+  (tooltip-mode -1)
+  (mouse-wheel-mode t))
+
+;; can't do it at launch or emacsclient won't always honor it
+(add-hook 'before-make-frame-hook 'esk-turn-off-tool-bar)
+
+;; we're too lazy to type in yes
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; initialize it you never know when it might come in handy
+(random t)
