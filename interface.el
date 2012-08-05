@@ -9,7 +9,7 @@
 (push 'fontify-frame after-make-frame-functions)
 
 ;; default window size
-(setq default-frame-alist '((width . 130) (height . 45) ))
+(setq default-frame-alist '((width . 190) (height . 50) ))
 
 ;; no strange gnu guy
 (setq inhibit-startup-message t)
