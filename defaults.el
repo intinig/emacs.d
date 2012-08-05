@@ -21,6 +21,7 @@
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
 (setq auto-save-file-name-transforms
       `((".*" ,(expand-file-name (concat user-emacs-directory "backups")) t)))
+
 ;; highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
 

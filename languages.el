@@ -4,6 +4,9 @@
 ;; highlight current line
 (add-hook 'prog-mode-hook 'intinig-turn-on-hl-line-mode)
 
+;; highlight words
+(add-hook 'prog-mode-hook 'idle-highlight-mode)
+
 ;; ruby compilation in ruby mode
 (eval-after-load 'ruby-mode
   '(progn
