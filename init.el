@@ -15,7 +15,7 @@
 (setq my-packages
       (append
        '(el-get smex ido-ubiquitous paredit yasnippet inf-ruby rvm ruby-compilation
-		magit haml-mode bundler)
+		magit haml-mode bundler sass-mode)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
