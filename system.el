@@ -31,4 +31,4 @@
 ;; (setq coffee-command "/usr/local/bin/coffee")
 
 ;; customize this to your taste
-(load-theme 'tsdh-dark)
+(load-theme 'adwaita)
