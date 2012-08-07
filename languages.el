@@ -1,5 +1,8 @@
 ;; paredit for lisp dialects
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+;; paredit for non lisps
+(add-hook 'ruby-mode-hook 'intinig-paredit-nonlisp)
+(add-hook 'html-mode-hook 'intinig-paredit-nonlisp)
 
 ;; highlight current line
 (add-hook 'prog-mode-hook 'intinig-turn-on-hl-line-mode)
@@ -12,3 +15,18 @@
   '(progn
      (define-key ruby-mode-map (kbd "C-x t") 'ruby-compilation-this-buffer)
      (define-key ruby-mode-map (kbd "C-x C-t") 'ruby-compilation-this-test)))
+
+;; Rake files are ruby, too, as are gemspecs, rackup files, etc.
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Thorfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
+
+;; We never want to edit Rubinius bytecode or MacRuby binaries
+(add-to-list 'completion-ignored-extensions ".rbc")
+(add-to-list 'completion-ignored-extensions ".rbo")
