@@ -16,6 +16,12 @@
      (define-key ruby-mode-map (kbd "C-x t") 'ruby-compilation-this-buffer)
      (define-key ruby-mode-map (kbd "C-x C-t") 'ruby-compilation-this-test)))
 
+;; sass compilation in sass mode
+(eval-after-load 'sass-mode
+  '(progn
+     (define-key sass-mode-map (kbd "C-x t") 'sass-compile-this-buffer)
+     (define-key sass-mode-map (kbd "C-x C-t") 'sass-compile-region)))
+
 ;; Rake files are ruby, too, as are gemspecs, rackup files, etc.
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))

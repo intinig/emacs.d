@@ -16,3 +16,13 @@
   (interactive)
   (end-of-line)
   (newline-and-indent))
+
+(defun sass-compile-this-buffer ()
+  "Takes the buffer you are working on and runs sass on it."
+  (interactive)
+  (shell-command-on-region (point-min) (point-max) "sass" "*SASS Output*" nil "SASS Error*" t))
+
+(defun sass-compile-region ()
+  "Runs sass on the current region."
+  (interactive)
+  (shell-command-on-region (region-beginning) (region-end) "sass" "*SASS Output*" nil "SASS Error*" t))
