@@ -13,6 +13,7 @@
 ;; ruby compilation in ruby mode
 (eval-after-load 'ruby-mode
   '(progn
+     (define-key ruby-mode-map (kbd "C-l") 'intinig-insert-equals-l)
      (define-key ruby-mode-map (kbd "C-x t") 'ruby-compilation-this-buffer)
      (define-key ruby-mode-map (kbd "C-x C-t") 'ruby-compilation-this-test)))
 
@@ -36,3 +37,6 @@
 ;; We never want to edit Rubinius bytecode or MacRuby binaries
 (add-to-list 'completion-ignored-extensions ".rbc")
 (add-to-list 'completion-ignored-extensions ".rbo")
+
+;; tab-widths
+(setq coffee-tab-width 2)

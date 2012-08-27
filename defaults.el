@@ -51,3 +51,6 @@
 
 ;; initialize it you never know when it might come in handy
 (random t)
+
+;; no tabs please!
+(setq-default indent-tabs-mode nil)

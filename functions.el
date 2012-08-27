@@ -26,3 +26,8 @@
   "Runs sass on the current region."
   (interactive)
   (shell-command-on-region (region-beginning) (region-end) "sass" "*SASS Output*" nil "SASS Error*" t))
+
+(defun intinig-insert-equals-l ()
+  "Inserts in the buffer =>"
+  (interactive)
+  (insert " => "))
