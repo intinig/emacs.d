@@ -16,7 +16,7 @@
       (append
        '(el-get smex ido-ubiquitous paredit yasnippet inf-ruby rvm ruby-compilation
 		magit haml-mode bundler sass-mode coffee-mode php-mode-improved powerline
-                smarty-mode idle-highlight-mode apache-mode)
+                smarty-mode idle-highlight-mode apache-mode lua-mode yaml-mode)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)

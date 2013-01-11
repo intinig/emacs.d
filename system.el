@@ -30,5 +30,7 @@
 ;; (setq scala-interpreter "/usr/local/bin/scala")
 ;; (setq coffee-command "/usr/local/bin/coffee")
 
+(setq lua-default-application "/usr/local/bin/lua")
+
 ;; customize this to your taste
 (load-theme 'adwaita)
