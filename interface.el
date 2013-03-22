@@ -1,6 +1,11 @@
 ;; Hide all GUI stuff. Emacs is no GUI!
-(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
-    (when (fboundp mode) (funcall mode -1)))
+(defun intinig-no-gui ()
+  "Turns off extra-gui stuff"
+  (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+    (when (fboundp mode) (funcall mode -1))))
+
+(intinig-no-gui)
+(add-hook 'before-make-frame-hook 'intinig-no-gui)
 
 ;; sets the default font to menlo
 (defun fontify-frame (frame)

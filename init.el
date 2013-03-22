@@ -36,3 +36,7 @@
 
 ;; load system-tailored defaults you should probably edit this
 (load (concat user-emacs-directory "system.el"))
+
+;; emacs server goodness
+
+(server-start)

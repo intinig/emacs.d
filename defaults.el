@@ -43,9 +43,6 @@
   (tooltip-mode -1)
   (mouse-wheel-mode t))
 
-;; can't do it at launch or emacsclient won't always honor it
-(add-hook 'before-make-frame-hook 'esk-turn-off-tool-bar)
-
 ;; we're too lazy to type in yes
 (defalias 'yes-or-no-p 'y-or-n-p)
 
