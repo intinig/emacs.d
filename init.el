@@ -1,6 +1,10 @@
 ;; loading interface defaults ASAP
 (load (concat user-emacs-directory "interface.el"))
 
+;; loading package.el ASAP to avoid errors
+(require 'package)
+(package-initialize)
+
 ;; Initialize el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
