@@ -34,3 +34,8 @@ files
  * interface.el - look and feel stuff
  * languages.el - configuration for programming languages modes. Eventually I plan to move most of this in el-get-user
  * system.el - system specific configuration, you should edit this to input your personal paths and stuff like that
+
+installation
+------------
+
+Starting from a clean emacs, it should just suffice to replace your ~/.emacs.d with the repository you cloned and then start emacs.
