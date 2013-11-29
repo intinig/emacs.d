@@ -38,4 +38,4 @@ files
 installation
 ------------
 
-Starting from a clean emacs, it should just suffice to replace your ~/.emacs.d with the repository you cloned and then start emacs.
+Starting from a clean emacs, it should just suffice to replace your ~/.emacs.d with the repository you cloned and then start emacs. When it's done, reboot it for maximum awesomeness :)
