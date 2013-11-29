@@ -34,6 +34,7 @@
 		;;        inf-ruby
 		;;        lua-mode
                 magit
+                markdown-mode
                 paredit
 		;;        php-mode-improved
                 powerline
