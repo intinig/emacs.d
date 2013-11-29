@@ -1,0 +1,4 @@
+(:name autotest
+       :pkgname "intinig/autotest.el"
+       :type "github"
+       :description "ZenTest's autotest integration with emacs.")

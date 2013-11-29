@@ -1,0 +1,1 @@
+(ido-ubiquitous-mode t)
