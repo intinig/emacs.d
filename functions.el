@@ -32,10 +32,6 @@
   (interactive)
   (insert " => "))
 
-(defun intinig-rake-spec ()
-  "Runs rake spec"
-  (interactive)
-  (ruby-compilation-rake "spec"))
 
 ;; (defun corona ()
 ;;   (interactive)

@@ -19,8 +19,6 @@
 (eval-after-load 'ruby-mode
   '(progn
      (define-key ruby-mode-map (kbd "C-l") 'intinig-insert-equals-l)
-     (define-key ruby-mode-map (kbd "C-x t") 'ruby-compilation-this-buffer)
-     (define-key ruby-mode-map (kbd "C-x C-t") 'intinig-rake-spec)
      ))
 
 ;; sass compilation in sass mode
