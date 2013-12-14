@@ -36,7 +36,7 @@
                 magit
                 markdown-mode
                 paredit
-		;;        php-mode-improved
+		php-mode
                 powerline
                 rspec-mode
                 ruby-compilation
