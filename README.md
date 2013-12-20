@@ -13,6 +13,7 @@ This is my configuration for emacs. It is (as of SHA: 3edb1c7bd6d3c82c572831751d
  * magit
  * markdown-mode
  * paredit
+ * php-mode
  * powerline
  * rspec-mode
  * ruby-compilation
