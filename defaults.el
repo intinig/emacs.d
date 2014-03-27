@@ -2,9 +2,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
-;; the god of modes
-(ido-mode t)
-
 ;; remove trailing whitespaces
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -18,10 +15,6 @@
 
 ;; pasting over something kills it
 (delete-selection-mode 1)
-
-;; just get snippets I installed, nothing else
-;;(setq yas/snippet-dirs (concat user-emacs-directory "snippets"))
-;;(yas/global-mode 1)
 
 ;; textmate behavior for enter key
 (global-set-key (kbd "<s-return>") 'textmate-next-line)

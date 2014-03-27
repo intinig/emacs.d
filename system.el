@@ -13,13 +13,15 @@
 ;; (setq ispell-program-name "/usr/local/bin/aspell")
 ;; (setq ispell-extra-args '("--sug-mode=ultra"))
 
-;; ;; Erlang initialization
-;; ;; Set the variables to your taste and needs
-;; (setq load-path (cons  "/usr/local/Cellar/erlang/R15B01/lib/erlang/lib/tools-2.6.7/emacs"
-;;                        load-path))
-;; (setq erlang-root-dir "/usr/local/Cellar/erlang/R15B01")
-;; (setq exec-path (cons "/usr/local/Cellar/erlang/R15B01/bin" exec-path))
-;; (require 'erlang-start)
+;; Erlang initialization
+;; Set the variables to your taste and needs
+(add-to-list 'load-path "/usr/local/Cellar/erlang/R16B02/lib/erlang/lib/tools-2.6.12/emacs")
+(setq erlang-root-dir "/usr/local/Cellar/erlang/R16B02")
+(add-to-list 'exec-path "/usr/local/Cellar/erlang/R16B02/bin")
+(setq erlang-man-root-dir "/usr/local/Cellar/erlang/R16B02/man")
+
+(require 'erlang-start)
+(require 'erlang-flymake)
 
 ;; Needed for my environment. What follows now should be customized to
 ;; your PATHS

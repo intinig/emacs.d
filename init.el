@@ -20,7 +20,8 @@
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes/")
 (setq my-packages
       (append
-       '(el-get ag
+       '(el-get actionscript-mode
+                ag
 		;;        apache-mode
 		autotest
                 bundler
@@ -35,22 +36,25 @@
 		;;        lua-mode
                 magit
                 markdown-mode
+                org-mode
                 paredit
 		php-mode
+                po-mode
                 powerline
                 rspec-mode
                 ruby-compilation
 		rvm
-		;;        sass-mode
+                sass-mode
 		;;        scala-mode2
 		;;        slime
+                slim-mode
 		;;        smartparens
 		;;        smarty-mode
 		smex
 		;;       tidy
-		;;       web-mode
+		web-mode
                 yaml-mode
-		;;        yasnippet
+		yasnippet
 		zenburn-theme
 		)
        (mapcar 'el-get-source-name el-get-sources)))
@@ -75,15 +79,3 @@
 
 ;; emacs server goodness
 (server-start)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

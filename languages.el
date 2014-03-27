@@ -1,6 +1,9 @@
 ;; paredit for lisp dialects
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
 
+;; show parens
+(show-paren-mode t)
+
 ;; smartparent - trying it out
 ;;(smartparens-global-mode t)
 ;;(add-to-list 'sp-ignore-modes-list 'erc-mode)
@@ -44,6 +47,11 @@
 ;; We never want to edit Rubinius bytecode or MacRuby binaries
 (add-to-list 'completion-ignored-extensions ".rbc")
 (add-to-list 'completion-ignored-extensions ".rbo")
+
+;; Erlang
+(add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode))
+(add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
+(add-to-list 'auto-mode-alist '("\\.app.src?$" . erlang-mode))
 
 ;; Web-mode goodies
 ;;(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
