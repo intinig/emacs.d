@@ -15,10 +15,10 @@
 
 ;; Erlang initialization
 ;; Set the variables to your taste and needs
-(add-to-list 'load-path "/usr/local/Cellar/erlang/R16B02/lib/erlang/lib/tools-2.6.12/emacs")
-(setq erlang-root-dir "/usr/local/Cellar/erlang/R16B02")
-(add-to-list 'exec-path "/usr/local/Cellar/erlang/R16B02/bin")
-(setq erlang-man-root-dir "/usr/local/Cellar/erlang/R16B02/man")
+(add-to-list 'load-path "/usr/local/Cellar/erlang/R16B03-1/lib/erlang/lib/tools-2.6.13/emacs")
+(setq erlang-root-dir "/usr/local/Cellar/erlang/R16B03-1")
+(add-to-list 'exec-path "/usr/local/Cellar/erlang/R16B03-1/bin")
+(setq erlang-man-root-dir "/usr/local/Cellar/erlang/R16B03-1/man")
 
 (require 'erlang-start)
 (require 'erlang-flymake)

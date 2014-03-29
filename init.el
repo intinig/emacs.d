@@ -55,7 +55,7 @@
 		web-mode
                 yaml-mode
 		yasnippet
-		zenburn-theme
+		zenburn-emacs
 		)
        (mapcar 'el-get-source-name el-get-sources)))
 
@@ -79,3 +79,18 @@
 
 ;; emacs server goodness
 (server-start)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("4031c1ea0bb235b75a048bd92f3bf3aa984c9f7cc5b408f00f62ed99a6eecc09" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(magit-auto-revert-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
