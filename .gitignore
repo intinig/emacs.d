@@ -7,3 +7,5 @@ el-get/*
 url
 /tramp
 /var/pcache
+/ido.last
+/ido.last~
