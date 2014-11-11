@@ -32,6 +32,16 @@
   (interactive)
   (insert " => "))
 
+(defun intinig-verify-single ()
+  "Runs the specified example at the point of the current buffer."
+  (interactive)
+  (rspec-run-single-file
+   (concat (rspec-spec-file-for (buffer-file-name))
+           ":"
+           (save-restriction
+             (widen)
+             (number-to-string (line-number-at-pos))))
+   (rspec-core-options)))
 
 ;; (defun corona ()
 ;;   (interactive)

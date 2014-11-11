@@ -1,4 +1,6 @@
 .smex-items
+recentf
+*.notes
 auto-save-list
 backups
 *.elc

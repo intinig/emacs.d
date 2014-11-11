@@ -23,13 +23,17 @@
        '(el-get actionscript-mode
                 ag
 		;;        apache-mode
+                arduino-mode
 		autotest
                 bundler
                 coffee-mode
+		color-theme-zenburn
+                dockerfile-mode
                 gist
                 ;;        git-modes
                 go-mode
 		;;        haml-mode
+                htmlize
 		;;        idle-highlight-mode
 		ido-ubiquitous
 		;;        inf-ruby
@@ -55,7 +59,6 @@
 		web-mode
                 yaml-mode
 		yasnippet
-		zenburn-emacs
 		)
        (mapcar 'el-get-source-name el-get-sources)))
 

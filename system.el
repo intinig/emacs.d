@@ -25,9 +25,25 @@
 
 ;; Needed for my environment. What follows now should be customized to
 ;; your PATHS
-(if (not (getenv "TERM_PROGRAM"))
-    (setenv "PATH"
-            (shell-command-to-string "source $HOME/.bash_profile && printf $PATH")))
+(defun source-env-get (script &rest vars)
+  "Source script in shell, then look for vars in the resulting subshell environment"
+  (loop for line in (split-string (shell-command-to-string (concat "source " script " && set")) "[\n]" t)
+        with result
+        if (string-match "^\\([[:ascii:]]+\\)=\\(.*\\)$" line)
+        do (let ((var (match-string 1 line))
+                 (val (match-string 2 line)))
+             (when (or (not vars) (member var vars))
+               (push (cons var val) result)))
+        finally return result))
+
+(defun env-set-alist (alist)
+  "Take an alist of string pairs, call setenv with them and return a list of strings by way of logging"
+  (loop for (var . val) in alist
+        do (setenv var val)
+        collect (concat var " = " val)))
+
+(unless (getenv "TERM_PROGRAM")
+    (env-set-alist (source-env-get "~/.bash_profile" "PATH" "RIOT_GAMES_API_KEY" "RIOT_GAMES_NEW_KEY")))
 
 ;; (setq scala-interpreter "/usr/local/bin/scala")
 ;; (setq coffee-command "/usr/local/bin/coffee")
@@ -38,3 +54,10 @@
 
 ;; customize this to your taste
 ;; (load-theme 'adwaita)
+
+;; xiki
+;; Load el4r, which loads Xiki
+;; (add-to-list 'load-path "/Users/intinig/.rvm/gems/ruby-2.1.2/gems/trogdoro-el4r-1.0.10/data/emacs/site-lisp/")
+;; (require 'el4r)
+;; (el4r-boot)
+;; (el4r-troubleshooting-keys)
