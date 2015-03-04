@@ -20,30 +20,30 @@
 (add-to-list 'exec-path "/usr/local/Cellar/erlang/R16B03-1/bin")
 (setq erlang-man-root-dir "/usr/local/Cellar/erlang/R16B03-1/man")
 
-(require 'erlang-start)
-(require 'erlang-flymake)
+;;(require 'erlang-start)
+;;(require 'erlang-flymake)
 
-;; Needed for my environment. What follows now should be customized to
-;; your PATHS
-(defun source-env-get (script &rest vars)
-  "Source script in shell, then look for vars in the resulting subshell environment"
-  (loop for line in (split-string (shell-command-to-string (concat "source " script " && set")) "[\n]" t)
-        with result
-        if (string-match "^\\([[:ascii:]]+\\)=\\(.*\\)$" line)
-        do (let ((var (match-string 1 line))
-                 (val (match-string 2 line)))
-             (when (or (not vars) (member var vars))
-               (push (cons var val) result)))
-        finally return result))
+;; ;; Needed for my environment. What follows now should be customized to
+;; ;; your PATHS
+;; (defun source-env-get (script &rest vars)
+;;   "Source script in shell, then look for vars in the resulting subshell environment"
+;;   (loop for line in (split-string (shell-command-to-string (concat "source " script " && set")) "[\n]" t)
+;;         with result
+;;         if (string-match "^\\([[:ascii:]]+\\)=\\(.*\\)$" line)
+;;         do (let ((var (match-string 1 line))
+;;                  (val (match-string 2 line)))
+;;              (when (or (not vars) (member var vars))
+;;                (push (cons var val) result)))
+;;         finally return result))
 
-(defun env-set-alist (alist)
-  "Take an alist of string pairs, call setenv with them and return a list of strings by way of logging"
-  (loop for (var . val) in alist
-        do (setenv var val)
-        collect (concat var " = " val)))
+;; (defun env-set-alist (alist)
+;;   "Take an alist of string pairs, call setenv with them and return a list of strings by way of logging"
+;;   (loop for (var . val) in alist
+;;         do (setenv var val)
+;;         collect (concat var " = " val)))
 
-(unless (getenv "TERM_PROGRAM")
-    (env-set-alist (source-env-get "~/.bash_profile" "PATH" "RIOT_GAMES_API_KEY" "RIOT_GAMES_NEW_KEY")))
+;; (unless (getenv "TERM_PROGRAM")
+;;     (env-set-alist (source-env-get "~/.bash_profile" "PATH" "RIOT_GAMES_API_KEY" "RIOT_GAMES_NEW_KEY")))
 
 ;; (setq scala-interpreter "/usr/local/bin/scala")
 ;; (setq coffee-command "/usr/local/bin/coffee")
